@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:13.3-alpine
+    ports:
+    - "5432:5432"
+    container_name: db
+    environment:
+      POSTGRES_DB: security
+      POSTGRES_URL: db/security
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
